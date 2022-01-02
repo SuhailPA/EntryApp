@@ -15,6 +15,7 @@ class HomeScreenViewModel @Inject constructor(
     private val repository: MovieRepository
 ) : ViewModel() {
 
+
     @ExperimentalPagingApi
     val pager = Pager(PagingConfig(pageSize = 10),
         remoteMediator = MoviesRemoteMediator(repository, 1)) {
